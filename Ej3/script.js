@@ -1,8 +1,13 @@
 const contenedorDiv = document.querySelector("div");
-const VALOR_MAX = 30
+const inputNum = document.querySelector("#input-num-saludos");
 
-for (let i = 0; i < VALOR_MAX; i++) {
-    contenedorDiv.innerHTML += `
-        <p>hola ${i+1}</p>
-    `;
+function generar() {
+
+    contenedorDiv.innerHTML = "";
+
+    for (let i = 0; i < inputNum.value; i++) {
+        contenedorDiv.innerHTML += `
+            <p>hola ${i+1}</p>
+        `;
+    }
 }
