@@ -1,15 +1,19 @@
 const contenedorDiv = document.querySelector("div");
 const inputNum = document.querySelector("#input-num-opciones");
 
-function generar() {
-
-    contenedorDiv.innerHTML = `
+contenedorDiv.innerHTML = `
         <select name="" id="contenedor-select">
-            
+            <option value="0">Seleccione</option>
         </select>
     `;
 
+function generar() {
+
     const contenedorSelect = document.querySelector("#contenedor-select");
+
+    contenedorSelect.innerHTML = `
+        <option value="0">Seleccione</option>
+    `;
 
     for (let i = 0; i < inputNum.value; i++) {
         contenedorSelect.innerHTML += `
